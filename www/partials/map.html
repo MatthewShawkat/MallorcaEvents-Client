@@ -1,0 +1,11 @@
+<pageheader title="Category Page"></pageheader>
+
+<div class="content">
+    <div class="page-title">Map</div>
+    
+    <div class="map-container" ng-app="googleMap">
+        <div ng-controller="MapCtrl">
+            <map id="map_canvas" eventid={{eventid}} name={{name}} long={{long}} lat={{lat}}></map>
+        </div>
+    </div>
+</div>

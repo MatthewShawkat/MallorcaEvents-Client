@@ -1,0 +1,13 @@
+<div class="event">
+    <a href="#/event/{{eventid}}">
+        <div class="event-name">{{title}}</div>
+        <span class=event-img-container>
+        	<span class="event-img-banner">View Tour</span>
+        	<img class="event-img" ng-src="{{image}}" />
+        </span>
+        <div class="event-detail">{{location}}</div>
+        <div class="event-detail">Adult: &nbsp; €{{adultprice}}</div>
+        <div class="event-detail">Child: &nbsp; €{{childprice}}</div>
+        <div class="event-description event-detail">{{description | limitTo:100}} ...</div>
+    </a>
+</div>

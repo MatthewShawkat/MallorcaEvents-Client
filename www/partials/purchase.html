@@ -1,0 +1,48 @@
+<pageheader title="Category Page"></pageheader>
+
+<div class="content">
+    <div class="page-title">Booking Information</div>
+
+    <div class="event">
+        <div class="bold">Great, let’s book your tour!</div>
+        <div class="bold">We just need a little more information first.</div>
+        <div class="bold">You have chosen to book the following:</div>
+        <br/>
+
+        <div class="event-name">{{event.name}}</div>
+        <span class="event-img-container">
+            <img class="event-img" ng-src="{{event.image[0]}}" />
+        </span>
+        <div class="event-detail">{{event.location}}</div>
+        <div class="event-detail">Adult: &nbsp; ${{event.adultprice}}</div>
+        <div class="event-detail">Child: &nbsp; ${{event.childprice}}</div>
+        <div class="event-description event-detail">{{event.description | limitTo:100}} ...</div>
+    </div>
+
+    <div class="event">
+        <div class="styled-select">
+            <div style="line-height:37px;padding-left:5px;" ng-click="selectdate()">{{date}}</div>
+        </div>
+
+        <div class="styled-select-half">
+            <select ng-model="selectedadult" ng-options="item.value as item.name for item in options">
+                <option value="" disabled selected>Adult Tickets</option>
+            </select>
+        </div>    
+
+        <div class="styled-select-half select-right">
+            <select ng-model="selectedchild" ng-options="item.value as item.name for item in options">
+                <option value="" disabled selected>Child Tickets</option>
+            </select>
+        </div>
+    </div>
+    <div class="event">
+        <input type="text" placeholder="Promotional Code" ng-model="promocode"/>
+    </div>
+
+    <div class="link-button">TERMS & CONDITIONS</div>
+</div>    
+
+<div class="footer">    
+    <div class="app-button" ng-click="confirm()">PROCEED TO SUMMARY</div>
+</div>

@@ -1,0 +1,26 @@
+<pageheader title="Category Page"></pageheader>
+
+<div class="content">
+    <div class="page-title">Booking Confirmation</div>
+
+    <div class="event">
+        <div class="bold">Almost there, please check all the details for your booking are correct:</div>
+        <br/>
+
+        <div class="event-name">{{event.name}}</div>
+        <span class="event-img-container">
+            <img class="event-img" ng-src="{{event.image[0]}}" />
+        </span>
+        <div class="event-detail">{{date}}</div>
+        <div class="event-detail">x{{adult}} Adult: €{{event.adultprice * adult}}</div>
+        <div class="event-detail">x{{child}} Child: €{{event.childprice * child}}</div>
+        </br>
+        
+        <div>Total: €{{event.adultprice * adult + event.childprice * child}}</div>
+
+    </div>
+</div>
+
+<div class="footer">
+    <div class="app-button" ng-click="paypal()">PROCEED TO PAYMENT</div>
+</div>

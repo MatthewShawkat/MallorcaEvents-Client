@@ -1,0 +1,16 @@
+<pageheader title="Category Page"></pageheader>
+
+<div class="content">
+    <div class="page-title">Contact Us</div>
+    
+    <div class="event">
+        <div>Please fill in the below form and someone will reply within 24 hours.</div>
+        <input type="text" name="name" placeholder="Name" ng-model="contactname"/>
+        <input type="email" name="email" placeholder="Email" ng-model="contactemail"/>
+        <textarea rows="7" name="message" placeholder="Message" ng-model="contactmessage"></textarea>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="app-button" ng-click="email()">SEND</div>
+</div>

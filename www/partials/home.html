@@ -1,0 +1,32 @@
+<pageheader title="Main"></pageheader>
+
+<div class="content-full">
+
+    <div class="container slider">
+        <a class="slide" ng-repeat="event in events | filter:{featured:true}" href="#/event/{{event.id}}" ng-hide="!isCurrentSlideIndex($index)">
+            <div>
+	            <span class="slide-title">{{event.name}}</span>
+	            <img class="image slide-animation nonDraggableImage"
+	             ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
+	             ng-src="{{event.image[0]}}">
+            </div>
+        </a>
+    
+        <nav class="nav">
+            <div class="wrapper">
+                <ul class="dots">
+                    <li class="dot" ng-repeat="event in events | filter:{featured:true}">
+                        <a ng-class="{'active':isCurrentSlideIndex($index)}"
+                           ng-click="setCurrentSlideIndex($index);">.</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    
+    <category 
+    		  ng-repeat="category in categories" 
+              title="{{category.name}}" 
+              image="{{category.image}}"
+              id="{{category.id}}">
+    </category>
+</div>

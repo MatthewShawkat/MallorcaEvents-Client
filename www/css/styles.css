@@ -1,0 +1,114 @@
+
+
+body {
+    overflow: hidden;
+    background-color: #000000;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.slider {
+    overflow: hidden;
+    position: relative;
+    background: #e6e6e6;
+    text-align:center;
+    padding: 40px 0;
+}
+
+.slide {
+/*    position: absolute;*/
+}
+
+.slide-title {
+    position:absolute;
+    background: rgb(54, 25, 25);
+    background: rgba(54, 25, 25, .8);
+    color: #fff;
+    padding: 10px;
+    margin: 7px;
+}
+
+/*---------------------------------------------------------
+map
+---------------------------------------------------------*/
+#map_canvas{
+    width:100%;
+    min-height: 500px;
+}
+
+.map-container {
+
+}
+
+/*---------------------------------------------------------
+NAV
+---------------------------------------------------------*/
+
+.nav {
+    text-align: center;
+    display: block;
+    position: absolute;
+    z-index: 1002;
+    left: 0;
+    bottom: -4px;
+    right: 0;
+    height: 48px;
+}
+
+.nonDraggableImage{
+    -webkit-user-drag: none;
+}
+
+.nav .wrapper {
+    margin: 0 auto;
+    width: 100%;
+    padding: 1em 0 .8em;
+}
+
+.nav ul {
+    margin: 0;
+    width: 100%;
+}
+
+.nav .dot, .nav .dot a {
+    display: inline-block;
+    zoom: 1;
+}
+
+.dots {
+    padding: 0;
+}
+
+.dots .dot {
+    position: relative;
+    margin: 0 8px;
+    width: 12px;
+    height: 12px;
+}
+
+.dots .dot a {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 6px;
+    height: 6px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background: #CA0013;
+    border: 1px solid #CA0013;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: background-color 0.25s, border-color 0.25s;
+    -moz-transition: background-color 0.25s, border-color 0.25s;
+    transition: background-color 0.25s, border-color 0.25s;
+}
+
+.dots .dot a.active {
+    border-color: #FAD600;
+    background-color: #FAD600;
+}

@@ -1,0 +1,55 @@
+<pageheader title="Category Page"></pageheader>
+
+<div class="content">
+    <div class="page-title">{{event.name}}</div>
+    
+    
+    
+    
+    
+    
+    
+    <div class="container slider">
+        <img ng-repeat="slide in slides" class="slide image slide-animation nonDraggableImage"
+             ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
+             ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide}}">
+    
+        <nav class="nav">
+            <div class="wrapper">
+                <ul class="dots">
+                    <li class="dot" ng-repeat="slide in slides">
+                        <a ng-class="{'active':isCurrentSlideIndex($index)}"
+                           ng-click="setCurrentSlideIndex($index);">.</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="detail-section">
+        <a class="map-link" href="#/map/{{event.id}}/{{event.name|escape}}/{{event.longitude}}/{{event.latitude}}"><div class="event-detail bold"><i class="fa fa-map-marker" style="font-size:19px; margin-right: 5px; color: #ccc"></i>{{event.location}}</div></a>
+        <div class="event-detail bold">Adult: €{{event.adultprice}} | Child: €{{event.childprice}}</div>
+        <div class="event-detail">{{event.description}}</div>
+        
+    </div>
+    
+    <div class="page-end center">
+        <i class="fa fa-chevron-up"></i>
+    </div>
+</div>
+
+
+<div class="footer">
+    <a href="#/purchase">
+        <div class="app-button">Book Now</div>
+    </a>
+</div>
+    

@@ -1,0 +1,16 @@
+<pageheader title="MallorcaPlus"></pageheader>
+
+<div class="content-full">
+    <div class="page-title">{{category.name}}</div>
+    
+    <event ng-repeat="event in events|filter:{category:categoryId}"
+           eventid="{{event.id}}"
+           title="{{event.name}}"
+           location="{{event.location}}"
+           adultprice="{{event.adultprice}}"
+           childprice="{{event.childprice}}"
+           description="{{event.description}}"
+           image="{{event.image[0]}}"
+           >
+    </event>
+</div>
